@@ -1,0 +1,10 @@
+<ion-view view-title="About The App">
+  <ion-content>
+    <h1>About App</h1>
+    <div ng-show="online">You're online</div>
+    <div ng-hide="online">You're offline</div>
+    <a ng-repeat="post in posts.articles" href="#/app/posts/{{post.id}}">
+      test
+    </a>
+  </ion-content>
+</ion-view>

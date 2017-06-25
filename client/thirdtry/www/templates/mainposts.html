@@ -1,0 +1,14 @@
+<ion-view view-title="Grenfell Disaster Information App">
+  <ion-content>
+    <a ng-repeat="post in posts.articles" href="#/app/posts/{{post.id}}">
+      <div class="list card">
+        <div class="item item-body" style="text-align:center;">
+          <h3>{{post.title}}</h3>
+        </div>
+        <div class="item item-body">
+          <img class="full-image" ng-src="{{post.urlToImage}}"></img>
+        </div>
+      </div>
+    </a>
+  </ion-content>
+</ion-view>
