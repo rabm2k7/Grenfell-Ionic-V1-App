@@ -19,6 +19,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         // org.apache.cordova.statusbar required
         StatusBar.styleDefault();
       }
+      var push = new Ionic.Push({
+        "debug": true
+      });
+
+      push.register(function(token) {
+        console.log("Device token:", token.token);
+      });
     });
   })
 
@@ -118,6 +125,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         views: {
           'menuContent': {
             templateUrl: 'templates/usefullinks.html',
+            controller: 'UsefullinksCtrl'
+          }
+        }
+      }).state('app.about', {
+        url: '/about',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/about.html',
             controller: 'UsefullinksCtrl'
           }
         }
